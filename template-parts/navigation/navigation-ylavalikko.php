@@ -1,6 +1,3 @@
-<?php $puhelinnumerot = get_field('ylavalikon_sisallot', 'options')['puhelinnumerot']; ?>
-<?php $haku = get_field('ylavalikon_sisallot', 'options')['haku']; ?>
-
 <?php
   global $wp;
   $ylavalikko = array();
@@ -29,66 +26,6 @@
   <div class="collapse navbar-collapse" id="ylavalikko-navbar">
 
     <ul class="navbar-nav ml-auto">
-
-      <li class="nav-item dropdown">
-
-        <a class="nav-link dropdown-toggle<?php if ( !$haku ) { echo ' pr-0'; } ?>" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-phone"></i><?php _e( "Soita", "oskarijarvelin" ); ?></a>
-
-        <div class="dropdown-menu">
-
-          <?php $i = 0; ?>
-
-          <?php foreach ( $puhelinnumerot as $puhelinnumero ): ?>
-
-            <a class="dropdown-item" href="tel:<?php echo str_replace( ' ','',get_field( "puhelinnumero", $puhelinnumero ) ); ?>">
-
-              <i class="fas fa-user pr-2"></i><?php echo get_the_title( $puhelinnumero ); ?>
-
-            </a>
-
-            <?php if ( count( $puhelinnumerot ) > 1 && $i < ( count( $puhelinnumerot ) - 1 ) ): ?>
-
-              <div class="dropdown-divider"></div>
-
-            <?php endif; ?>
-
-            <?php $i++; ?>
-
-          <?php endforeach; ?>
-
-        </div>
-
-      </li>
-
-      <!--
-      <?php if ( $haku ): ?>
-
-        <li class="nav-item">
-
-          <a class="nav-link<?php if ( is_search() ) { echo " active"; } ?> pr-0" href="<?php echo get_site_url() . '?s='; ?>">
-
-            <i class="fas fa-search"></i><?php _e( "Etsi", "oskarijarvelin" ); ?><?php if ( is_search() ) { ?> <span class="sr-only">(nykyinen)</span><?php } ?>
-
-          </a>
-
-        </li>
-
-      <?php endif; ?>
-      -->
-
-      <?php if ( $haku ): ?>
-
-        <li class="nav-item">
-
-          <a class="nav-link" href="#yhteys">
-
-            <?php _e( "Yhteys", "oskarijarvelin" ); ?>
-
-          </a>
-
-        </li>
-
-      <?php endif; ?>
 
       <?php foreach ( $ylavalikko as $linkki ): ?>
 

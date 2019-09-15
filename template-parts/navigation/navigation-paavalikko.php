@@ -2,9 +2,7 @@
   global $wp;
   $paavalikko = array();
 
-  if ( pll_current_language() == 'en' ) { $menu = 'mainmenu'; } else { $menu = 'paavalikko'; }
-
-  foreach ( wp_get_nav_menu_items( $menu ) as $linkki ):
+  foreach ( wp_get_nav_menu_items( 'paavalikko' ) as $linkki ):
 
     $paavalikko[ $linkki->ID ] = array(
       'title' => $linkki->title,
