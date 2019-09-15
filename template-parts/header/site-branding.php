@@ -21,7 +21,7 @@
 			</p>
 	<?php endif; ?>
 	<?php if ( has_nav_menu( 'paavalikko' ) ) : ?>
-		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Päävalikko', 'starter2019' ); ?>">
+		<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Päävalikko', 'oskarijarvelin' ); ?>">
 			<?php
 			wp_nav_menu(
 				array(
@@ -33,7 +33,7 @@
 		</nav><!-- #site-navigation -->
 	<?php endif; ?>
 	<?php if ( has_nav_menu( 'ylavalikko' ) ) : ?>
-		<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Ylävalikko', 'starter2019' ); ?>">
+		<nav class="social-navigation" aria-label="<?php esc_attr_e( 'Ylävalikko', 'oskarijarvelin' ); ?>">
 			<?php
 			wp_nav_menu(
 				array(

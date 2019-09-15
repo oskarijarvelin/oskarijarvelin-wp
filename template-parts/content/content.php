@@ -15,7 +15,7 @@
 	<header class="entry-header">
 		<?php
 		if ( is_sticky() && is_home() && ! is_paged() ) {
-			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'starter2019' ) );
+			printf( '<span class="sticky-post">%s</span>', _x( 'Featured', 'post', 'oskarijarvelin' ) );
 		}
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -31,7 +31,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'starter2019' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'oskarijarvelin' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -44,7 +44,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'starter2019' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'oskarijarvelin' ),
 				'after'  => '</div>',
 			)
 		);

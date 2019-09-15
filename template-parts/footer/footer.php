@@ -62,7 +62,7 @@
 
 		<div class="col-12 col-sm-6 order-1 order-sm-2 py-1 text-sm-right px-sm-0">
 
-			<a class="text-white" href="https://www.livepaletti.fi/tietosuojaseloste/"><?php _e( "Tietosuojaseloste", "livepaletti"); ?></a>
+			<a class="text-white" href="https://www.oskarijarvelin.fi/tietosuojaseloste/"><?php _e( "Tietosuojaseloste", "oskarijarvelin"); ?></a>
 
 		</div>
 

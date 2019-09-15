@@ -32,7 +32,7 @@
 
       <li class="nav-item dropdown">
 
-        <a class="nav-link dropdown-toggle<?php if ( !$haku ) { echo ' pr-0'; } ?>" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-phone"></i><?php _e( "Soita", "livepaletti" ); ?></a>
+        <a class="nav-link dropdown-toggle<?php if ( !$haku ) { echo ' pr-0'; } ?>" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-phone"></i><?php _e( "Soita", "oskarijarvelin" ); ?></a>
 
         <div class="dropdown-menu">
 
@@ -67,7 +67,7 @@
 
           <a class="nav-link<?php if ( is_search() ) { echo " active"; } ?> pr-0" href="<?php echo get_site_url() . '?s='; ?>">
 
-            <i class="fas fa-search"></i><?php _e( "Etsi", "livepaletti" ); ?><?php if ( is_search() ) { ?> <span class="sr-only">(nykyinen)</span><?php } ?>
+            <i class="fas fa-search"></i><?php _e( "Etsi", "oskarijarvelin" ); ?><?php if ( is_search() ) { ?> <span class="sr-only">(nykyinen)</span><?php } ?>
 
           </a>
 
@@ -82,7 +82,7 @@
 
           <a class="nav-link" href="#yhteys">
 
-            <?php _e( "Yhteys", "livepaletti" ); ?>
+            <?php _e( "Yhteys", "oskarijarvelin" ); ?>
 
           </a>
 

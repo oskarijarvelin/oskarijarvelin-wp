@@ -1,11 +1,11 @@
 {
-  "name": "starter2019",
+  "name": "oskarijarvelin",
   "version": "1.0.0",
   "description": "Default WP Theme",
   "bugs": {
-    "url": "https://github.com/WordPress/starter2019/issues"
+    "url": "https://github.com/WordPress/oskarijarvelin/issues"
   },
-  "homepage": "https://github.com/WordPress/starter2019#readme",
+  "homepage": "https://github.com/WordPress/oskarijarvelin#readme",
   "devDependencies": {
     "@wordpress/browserslist-config": "^2.2.2",
     "autoprefixer": "^9.1.5",

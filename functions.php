@@ -118,10 +118,10 @@ if ( is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) ) {
   }
 }
 
-if ( ! function_exists( 'starter2019_setup' ) ) :
-	function starter2019_setup() {
+if ( ! function_exists( 'oskarijarvelin_setup' ) ) :
+	function oskarijarvelin_setup() {
 
-		load_theme_textdomain( 'starter2019', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'oskarijarvelin', get_template_directory() . '/languages' );
 
 		add_theme_support( 'automatic-feed-links' );
 
@@ -133,9 +133,9 @@ if ( ! function_exists( 'starter2019_setup' ) ) :
 
 		register_nav_menus(
 			array(
-        'paavalikko' => __( 'Päävalikko FI', 'starter2019' ),
-        'mainmenu' => __( 'Päävalikko EN', 'starter2019' ),
-        'ylavalikko' => __( 'Ylävalikko', 'starter2019' ),
+        'paavalikko' => __( 'Päävalikko FI', 'oskarijarvelin' ),
+        'mainmenu' => __( 'Päävalikko EN', 'oskarijarvelin' ),
+        'ylavalikko' => __( 'Ylävalikko', 'oskarijarvelin' ),
 			)
 		);
 
@@ -172,26 +172,26 @@ if ( ! function_exists( 'starter2019_setup' ) ) :
 			'editor-font-sizes',
 			array(
 				array(
-					'name'      => __( 'Small', 'starter2019' ),
-					'shortName' => __( 'S', 'starter2019' ),
+					'name'      => __( 'Small', 'oskarijarvelin' ),
+					'shortName' => __( 'S', 'oskarijarvelin' ),
 					'size'      => 19.5,
 					'slug'      => 'small',
 				),
 				array(
-					'name'      => __( 'Normal', 'starter2019' ),
-					'shortName' => __( 'M', 'starter2019' ),
+					'name'      => __( 'Normal', 'oskarijarvelin' ),
+					'shortName' => __( 'M', 'oskarijarvelin' ),
 					'size'      => 22,
 					'slug'      => 'normal',
 				),
 				array(
-					'name'      => __( 'Large', 'starter2019' ),
-					'shortName' => __( 'L', 'starter2019' ),
+					'name'      => __( 'Large', 'oskarijarvelin' ),
+					'shortName' => __( 'L', 'oskarijarvelin' ),
 					'size'      => 36.5,
 					'slug'      => 'large',
 				),
 				array(
-					'name'      => __( 'Huge', 'starter2019' ),
-					'shortName' => __( 'XL', 'starter2019' ),
+					'name'      => __( 'Huge', 'oskarijarvelin' ),
+					'shortName' => __( 'XL', 'oskarijarvelin' ),
 					'size'      => 49.5,
 					'slug'      => 'huge',
 				),
@@ -201,16 +201,16 @@ if ( ! function_exists( 'starter2019_setup' ) ) :
 		add_theme_support( 'responsive-embeds' );
 	}
 endif;
-add_action( 'after_setup_theme', 'starter2019_setup' );
+add_action( 'after_setup_theme', 'oskarijarvelin_setup' );
 
 
-function starter2019_widgets_init() {
+function oskarijarvelin_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => __( 'Sivupalkki', 'starter2019' ),
+			'name'          => __( 'Sivupalkki', 'oskarijarvelin' ),
 			'id'            => 'sivupalkki',
-			'description'   => __( 'Lisää vimpaimia näyttääksesi ne sivupalkissa.', 'starter2019' ),
+			'description'   => __( 'Lisää vimpaimia näyttääksesi ne sivupalkissa.', 'oskarijarvelin' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -219,16 +219,16 @@ function starter2019_widgets_init() {
 	);
 
 }
-add_action( 'widgets_init', 'starter2019_widgets_init' );
+add_action( 'widgets_init', 'oskarijarvelin_widgets_init' );
 
-function starter2019_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'starter2019_content_width', 640 );
+function oskarijarvelin_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'oskarijarvelin_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'starter2019_content_width', 0 );
+add_action( 'after_setup_theme', 'oskarijarvelin_content_width', 0 );
 
 
 
-function starter2019_scripts() {
+function oskarijarvelin_scripts() {
 
   /* Bootstrap v4.3.1*/
   wp_enqueue_style( 'bootstrap-styles', get_theme_file_uri( 'depencies/bootstrap/bootstrap.min.css' ), array(), '' );
@@ -247,4 +247,4 @@ function starter2019_scripts() {
 	wp_enqueue_style( 'theme-styles', get_theme_file_uri( 'style.min.css' ), array(), '' );
 	wp_enqueue_script( 'theme-scripts', get_theme_file_uri( 'script.min.js' ), array( 'jquery' ), '' );
 }
-add_action( 'wp_enqueue_scripts', 'starter2019_scripts' );
+add_action( 'wp_enqueue_scripts', 'oskarijarvelin_scripts' );

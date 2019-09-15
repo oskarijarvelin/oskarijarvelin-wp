@@ -28,18 +28,18 @@ get_header();
 					the_post_navigation(
 						array(
 							/* translators: %s: parent post link */
-							'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'starter2019' ), '%title' ),
+							'prev_text' => sprintf( __( '<span class="meta-nav">Published in</span><span class="post-title">%s</span>', 'oskarijarvelin' ), '%title' ),
 						)
 					);
 				} elseif ( is_singular( 'post' ) ) {
 					// Previous/next post navigation.
 					the_post_navigation(
 						array(
-							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'starter2019' ) . '</span> ' .
-								'<span class="screen-reader-text">' . __( 'Next post:', 'starter2019' ) . '</span> <br/>' .
+							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'oskarijarvelin' ) . '</span> ' .
+								'<span class="screen-reader-text">' . __( 'Next post:', 'oskarijarvelin' ) . '</span> <br/>' .
 								'<span class="post-title">%title</span>',
-							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'starter2019' ) . '</span> ' .
-								'<span class="screen-reader-text">' . __( 'Previous post:', 'starter2019' ) . '</span> <br/>' .
+							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'oskarijarvelin' ) . '</span> ' .
+								'<span class="screen-reader-text">' . __( 'Previous post:', 'oskarijarvelin' ) . '</span> <br/>' .
 								'<span class="post-title">%title</span>',
 						)
 					);

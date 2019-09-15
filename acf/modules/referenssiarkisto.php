@@ -79,7 +79,7 @@ $keikat = new WP_Query( array(
 
       <div class="col-12">
 
-        <h2><?php _e("Ei referenssejä vuodelle", "livepaletti"); ?> <?php echo $current_vuosi; ?></h2>
+        <h2><?php _e("Ei referenssejä vuodelle", "oskarijarvelin"); ?> <?php echo $current_vuosi; ?></h2>
 
       </div>
 
