@@ -1,45 +1,21 @@
-<?php
-/**
- * The main template file
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WordPress
- * @subpackage Twenty_Nineteen
- * @since 1.0.0
- */
+<?php get_header(); ?>
 
-get_header();
-?>
+<main id="main" class="main index">
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<header class="main-header">
+		<?php get_template_part('template-parts/hero/hero'); ?>
+	</header>
 
-		<?php
-		if ( have_posts() ) {
+<?php if ( have_posts() ) : ?>
 
-			// Load posts loop.
-			while ( have_posts() ) {
-				the_post();
-				get_template_part( 'template-parts/content/content' );
-			}
+	<?php while ( have_posts() ) : the_post(); ?>
+		<?php get_template_part( 'template-parts/content/excerpt', 'post' ); ?>
+	<?php endwhile; ?>
 
+<?php else : ?>
+	<?php get_template_part( 'template-parts/content/content', 'none' ); ?>
+<?php endif; ?>
 
-		} else {
+</main>
 
-			// If no content, include the "No posts found" template.
-			get_template_part( 'template-parts/content/content', 'none' );
-
-		}
-		?>
-
-		</main><!-- .site-main -->
-	</section><!-- .content-area -->
-
-<?php
-get_footer();
+<?php get_footer(); ?>

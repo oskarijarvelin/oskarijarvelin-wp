@@ -60,59 +60,7 @@ if ( is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) ) {
   function my_acf_admin_head() { ?>
 
     <style type="text/css">
-      .acf-flexible-content .layout .acf-fc-layout-handle {
-        background-color: #dcdcdc;
-        color: #444;
-        display: flex;
-        padding: 12px 10px;
-      }
-      .acf-fc-layout-handle .thumbnail {
-  	    padding: 3px;
-  	    margin-right: 5px;
-  		}
-  		.acf-fc-layout-handle img {
-  	    padding: 3px;
-  	    border: 1px solid #ccc;
-  	    background: #fff;
-  	    position: absolute;
-  	    top: -10px;
-  		}
-      .acf-fc-layout-handle h4 {
-      	margin: 0;
-      }
-      .acf-flexible-content .layout .acf-fc-layout-order {
-      	margin-right: 10px;
-      }
-      .acf-flexible-content .layout .acf-fc-layout-controls {
-      	top: 12px;
-      }
-      .acf-repeater.-row > table > tbody > tr > td,
-      .acf-repeater.-block > table > tbody > tr > td {
-          border-top: 4px solid #333333;
-      }
-      .acf-repeater .acf-row-handle {
-          vertical-align: top !important;
-          padding-top: 16px;
-      }
-      .acf-repeater .acf-row-handle span {
-          font-size: 22px;
-          font-weight: bold;
-          color: #333333;
-      }
-      .imageUpload img {
-          width: 75px;
-      }
-      .acf-repeater .acf-row-handle .acf-icon.-minus {
-          top: 30px;
-      }
-      .acf-flexible-content .layout .acf-fc-layout-controlls .acf-icon.-collapse {
-  		    color: #394049;
-  		    border-color: #eeeeee;
-  		}
-  		.acf-flexible-content .layout .acf-fc-layout-controlls .acf-icon.-collapse:hover {
-      		color: #848895;
-      		background: #ffffff;
-  		}
+      .acf-flexible-content .layout .acf-fc-layout-handle{background-color:#dcdcdc;color:#444;display:flex;padding:12px 10px}.acf-fc-layout-handle .thumbnail{padding:3px;margin-right:5px}.acf-fc-layout-handle img{padding:3px;border:1px solid #ccc;background:#fff;position:absolute;top:-10px}.acf-fc-layout-handle h4{margin:0}.acf-flexible-content .layout .acf-fc-layout-order{margin-right:10px}.acf-flexible-content .layout .acf-fc-layout-controls{top:12px}.acf-repeater.-block > table > tbody > tr > td,.acf-repeater.-row > table > tbody > tr > td{border-top:4px solid #333333}.acf-repeater .acf-row-handle{vertical-align:top !important;padding-top:16px}.acf-repeater .acf-row-handle span{font-size:22px;font-weight:bold;color:#333333}.imageUpload img{width:75px}.acf-repeater .acf-row-handle .acf-icon.-minus{top:30px}.acf-flexible-content .layout .acf-fc-layout-controlls .acf-icon.-collapse{color:#394049;border-color:#eeeeee}.acf-flexible-content .layout .acf-fc-layout-controlls .acf-icon.-collapse:hover{color:#848895;background:#ffffff}
     </style>
     <?php
   }
@@ -129,12 +77,9 @@ if ( ! function_exists( 'oskarijarvelin_setup' ) ) :
 
 		add_theme_support( 'post-thumbnails' );
 
-		set_post_thumbnail_size( 1140, 9999 );
-
 		register_nav_menus(
 			array(
-        'paavalikko' => __( 'Päävalikko FI', 'oskarijarvelin' ),
-        'mainmenu' => __( 'Päävalikko EN', 'oskarijarvelin' ),
+        'paavalikko' => __( 'Päävalikko', 'oskarijarvelin' ),
         'ylavalikko' => __( 'Ylävalikko', 'oskarijarvelin' ),
 			)
 		);
@@ -156,7 +101,7 @@ if ( ! function_exists( 'oskarijarvelin_setup' ) ) :
 				'height'      => 190,
 				'width'       => 190,
 				'flex-width'  => true,
-				'flex-height' => false,
+				'flex-height' => true,
 			)
 		);
 

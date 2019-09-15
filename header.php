@@ -7,9 +7,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body class="bg-dark text-white">
+<body class="">
 <?php wp_body_open(); ?>
 
 	<a class="sr-only sr-only-focusable" href="#main"><?php _e( 'Hyppää sisältöön', 'oskarijarvelin' ); ?></a>
-
-	<?php get_template_part( 'template-parts/header/header-for', ( is_front_page() ? 'landing' : 'others') ); ?>
