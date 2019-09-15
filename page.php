@@ -1,14 +1,9 @@
 <?php get_header(); ?>
+<main id="main" class="main page">
 
-	<main id="main" class="main page mt-5">
+	<?php while ( have_posts() ) : the_post(); ?>
+		<?php get_template_part( 'template-parts/content/single', 'page' ); ?>
+	<?php	endwhile; ?>
 
-		<?php
-			while ( have_posts() ) :
-				the_post();
-				get_template_part( 'template-parts/content/content', 'page' );
-			endwhile;
-		?>
-
-	</main>
-
+</main>
 <?php get_footer(); ?>
