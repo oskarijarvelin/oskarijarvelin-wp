@@ -21,7 +21,7 @@
   endforeach;
 ?>
 
-<nav class="navbar navbar-expand navbar-dark px-sm-0">
+<nav class="navbar navbar-expand navbar-light px-0">
 
   <div class="collapse navbar-collapse" id="ylavalikko-navbar">
 

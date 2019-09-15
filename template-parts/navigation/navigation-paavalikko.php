@@ -21,7 +21,7 @@
   endforeach;
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-dark px-sm-0">
+<nav class="navbar navbar-expand-lg navbar-light px-0">
   <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
     <?php if ( get_field('logo', 'theme') ) : ?>
   	   <div class="site-logo"><img src="<?php echo wp_get_attachment_image_src( get_field('logo', 'theme'), 'medium' )[0]; ?>" height="28px" width="auto"></div>
@@ -30,7 +30,7 @@
     <?php endif; ?>
   </a>
 
-  <button id="paavalikkoToggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#paavalikko-navbar" aria-controls="paavalikko-navbar" aria-expanded="false" aria-label="Toggle navigation">
+  <button id="paavalikkoToggle" class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#paavalikko-navbar" aria-controls="paavalikko-navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
