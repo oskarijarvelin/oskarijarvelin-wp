@@ -1,0 +1,17 @@
+.container.navigation.ylavalikko {
+  position: relative;
+  z-index: 3;
+
+  a.nav-link img {
+    margin: 0 0 8px !important;
+  }
+}
+
+.container.navigation.paavalikko {
+  position: relative;
+  z-index: 1;
+
+  li.nav-item:last-of-type a.nav-link{
+    padding-right: 0 !important;
+  }
+}
