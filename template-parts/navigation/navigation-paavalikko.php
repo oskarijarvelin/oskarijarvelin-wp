@@ -21,56 +21,38 @@
   endforeach;
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-light px-0">
-  <a class="navbar-brand" href="<?php echo get_site_url(); ?>">
-    <?php if ( get_field('logo', 'theme') ) : ?>
-  	   <div class="site-logo"><img src="<?php echo wp_get_attachment_image_src( get_field('logo', 'theme'), 'medium' )[0]; ?>" height="28px" width="auto"></div>
-    <?php else : ?>
-      <?php echo get_bloginfo( 'name' ); ?>
-    <?php endif; ?>
-  </a>
+<?php foreach ( $paavalikko as $linkki ): ?>
 
-  <button id="paavalikkoToggle" class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#paavalikko-navbar" aria-controls="paavalikko-navbar" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <?php if ( $linkki['is_children'] !== true ): ?>
 
-  <div class="collapse navbar-collapse" id="paavalikko-navbar">
-    <ul class="navbar-nav ml-auto py-5 py-lg-0">
-      <?php foreach ( $paavalikko as $linkki ): ?>
+    <li class="nav-item px-5 px-lg-0 py-2 py-lg-0<?php if ( $linkki['has_children'] === true ) { echo " dropdown"; } ?>">
 
-        <?php if ( $linkki['is_children'] !== true ): ?>
+      <?php if ( $linkki['has_children'] === true ): ?>
 
-          <li class="nav-item px-5 px-lg-0 py-2 py-lg-0<?php if ( $linkki['has_children'] === true ) { echo " dropdown"; } ?>">
+        <a class="nav-link lead dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $linkki['title']; ?></a>
 
-            <?php if ( $linkki['has_children'] === true ): ?>
+        <div class="dropdown-menu">
 
-              <a class="nav-link lead dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $linkki['title']; ?></a>
+          <?php foreach ( $linkki['childrens'] as $alalinkki ): ?>
 
-              <div class="dropdown-menu">
+            <a class="dropdown-item<?php if ( $paavalikko[$alalinkki]['url'] === home_url( $wp->request ) . '/' ) { echo " active"; } ?>" href="<?php echo $paavalikko[$alalinkki]['url']; ?>">
+              <?php echo $paavalikko[$alalinkki]['title']; ?><?php if ( $paavalikko[$alalinkki]['url'] === home_url( $wp->request ) . '/' ) { ?> <span class="sr-only">(nykyinen)</span><?php } ?>
+            </a>
 
-                <?php foreach ( $linkki['childrens'] as $alalinkki ): ?>
+          <?php endforeach; ?>
 
-                  <a class="dropdown-item<?php if ( $paavalikko[$alalinkki]['url'] === home_url( $wp->request ) . '/' ) { echo " active"; } ?>" href="<?php echo $paavalikko[$alalinkki]['url']; ?>">
-                    <?php echo $paavalikko[$alalinkki]['title']; ?><?php if ( $paavalikko[$alalinkki]['url'] === home_url( $wp->request ) . '/' ) { ?> <span class="sr-only">(nykyinen)</span><?php } ?>
-                  </a>
+        </div>
 
-                <?php endforeach; ?>
+      <?php else: ?>
 
-              </div>
+        <a class="nav-link lead<?php if ( $linkki['url'] === home_url( $wp->request ) . '/' ) { echo " active"; } ?>" href="<?php echo $linkki['url']; ?>">
+          <?php echo $linkki['title']; ?><?php if ( $linkki['url'] === home_url( $wp->request ) . '/' ) { ?> <span class="sr-only">(nykyinen)</span><?php } ?>
+        </a>
 
-            <?php else: ?>
+      <?php endif; ?>
 
-              <a class="nav-link lead<?php if ( $linkki['url'] === home_url( $wp->request ) . '/' ) { echo " active"; } ?>" href="<?php echo $linkki['url']; ?>">
-                <?php echo $linkki['title']; ?><?php if ( $linkki['url'] === home_url( $wp->request ) . '/' ) { ?> <span class="sr-only">(nykyinen)</span><?php } ?>
-              </a>
+    </li>
 
-            <?php endif; ?>
+  <?php endif; ?>
 
-          </li>
-
-        <?php endif; ?>
-
-      <?php endforeach; ?>
-    </ul>
-  </div>
-</nav>
+<?php endforeach; ?>
