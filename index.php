@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="main" class="main index">
+<main id="main" class="main index py-3">
 
 	<header class="main-header">
 		<?php get_template_part('template-parts/hero/hero'); ?>

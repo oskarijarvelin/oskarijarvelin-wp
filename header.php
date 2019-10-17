@@ -12,7 +12,7 @@
 
 	<a class="sr-only sr-only-focusable" href="#main"><?php _e( 'Hyppää sisältöön', 'oskarijarvelin' ); ?></a>
 
-	<div class="sticky-top bg-white shadow-sm">
+	<div class="sticky-top bg-white shadow-sm border-bottom">
 	  <div class="container navigation paavalikko">
 	    <div class="row">
 	      <div class="col">
@@ -30,7 +30,7 @@
 					  </button>
 
 					  <div class="collapse navbar-collapse" id="paavalikko-navbar">
-					    <ul class="navbar-nav ml-auto py-5 py-lg-0">
+					    <ul class="navbar-nav ml-auto py-4 py-lg-0">
 								<?php if ( has_nav_menu( 'paavalikko' ) ) : ?>
 				            <?php get_template_part( 'template-parts/navigation/navigation', 'paavalikko' ); ?>
 				        <?php endif; ?>

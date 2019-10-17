@@ -25,7 +25,7 @@
 
   <?php if ( $linkki['is_children'] !== true ): ?>
 
-    <li class="nav-item px-5 px-lg-0 py-2 py-lg-0<?php if ( $linkki['has_children'] === true ) { echo " dropdown"; } ?>">
+    <li class="nav-item px-0 py-0 pl-lg-3<?php if ( $linkki['has_children'] === true ) { echo " dropdown"; } ?>">
 
       <?php if ( $linkki['has_children'] === true ): ?>
 
@@ -45,7 +45,7 @@
 
       <?php else: ?>
 
-        <a class="nav-link lead<?php if ( $linkki['url'] === home_url( $wp->request ) . '/' ) { echo " active"; } ?>" href="<?php echo $linkki['url']; ?>">
+        <a class="nav-link px-lg-0 pl-lg-3 text-center lead<?php if ( $linkki['url'] === home_url( $wp->request ) . '/' ) { echo " active"; } ?>" href="<?php echo $linkki['url']; ?>">
           <?php echo $linkki['title']; ?><?php if ( $linkki['url'] === home_url( $wp->request ) . '/' ) { ?> <span class="sr-only">(nykyinen)</span><?php } ?>
         </a>
 
