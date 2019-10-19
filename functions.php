@@ -186,9 +186,6 @@ function oskarijarvelin_scripts() {
   wp_enqueue_style( 'swiper-styles', get_theme_file_uri( 'depencies/swiper/swiper.min.css' ), array(), '' );
 	wp_enqueue_script( 'swiper-scripts', get_theme_file_uri( 'depencies/swiper/swiper.min.js' ), array(), '' );
 
-  /* Font Awesome v5.9.0*/
-	wp_enqueue_script( 'fontawesome-scripts', 'https://kit.fontawesome.com/5269f87579.js', array(), '' );
-
 	wp_enqueue_style( 'theme-styles', get_theme_file_uri( 'style.min.css' ), array(), '' );
 	wp_enqueue_script( 'theme-scripts', get_theme_file_uri( 'script.min.js' ), array( 'jquery' ), '' );
 }

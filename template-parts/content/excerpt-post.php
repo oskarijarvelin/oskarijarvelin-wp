@@ -3,7 +3,7 @@
   <a class="stretched-link" href="<?php the_permalink(); ?>"></a>
 
   <?php if ( has_post_thumbnail() ) : ?>
-    <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>" class="card-img-top" alt="...">
+    <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'medium' ); ?>" class="card-img-top" alt="...">
   <?php endif; ?>
 
   <div class="card-body">

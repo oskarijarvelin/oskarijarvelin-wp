@@ -5,8 +5,8 @@
 
 			<div class="col-12">
 				<nav aria-label="breadcrumb">
-				  <ol class="breadcrumb bg-white p-0">
-				    <li class="breadcrumb-item"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">Ajankohtaista</a></li>
+				  <ol class="breadcrumb bg-white m-0 p-0">
+				    <li class="breadcrumb-item"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>"><?php echo get_the_title( get_option( 'page_for_posts' ) ); ?></a></li>
 				    <li class="breadcrumb-item active"></li>
 				  </ol>
 				</nav>
@@ -30,7 +30,7 @@
 	<div class="container post-thumbnail pb-5">
     <div class="row d-flex justify-content-center">
 			<div class="col-12 py-3 px-0 px-md-3">
-				<img class="shadow" src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'full-size' ); ?>">
+				<img class="shadow" src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>">
 			</div>
 		</div>
 	</div>

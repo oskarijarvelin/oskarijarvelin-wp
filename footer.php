@@ -16,7 +16,7 @@
 
 			<div class="col-12 col-sm-6 text-center text-sm-left">&copy <?php echo date('Y'); ?>: <a href="<?php echo get_site_url(); ?>" class="oskari"><?php echo get_bloginfo( 'name' ); ?></a></div>
 
-			<div class="col-12 col-sm-6 py-3 py-sm-0 text-center text-sm-right"><a href="https://www.oskarijarvelin.fi/tietosuojaseloste/"><?php _e( "Tietosuojaseloste", "oskarijarvelin"); ?></a></div>
+			<div class="col-12 col-sm-6 py-3 py-sm-0 text-center text-sm-right"><a href="<?php echo get_the_permalink( get_option( 'wp_page_for_privacy_policy' ) ); ?>"><?php echo get_the_title( get_option( 'wp_page_for_privacy_policy' ) ); ?></a></div>
 
 		</div>
 
