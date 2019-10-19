@@ -55,3 +55,9 @@
   font-family: 'Roboto Condensed';
   font-weight: bold;
 }
+
+.acf-module, .post-content {
+  h2, h3, h4, h5, h6 {
+    margin: 48px 0 24px;
+  }
+}

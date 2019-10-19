@@ -1,0 +1,15 @@
+.display-4 {
+  font-size: 3rem;
+}
+
+.card-columns {
+  column-count: 1;
+
+  @include breakpoint(medium) {
+    column-count: 2;
+  }
+
+  @include breakpoint(xlarge) {
+    column-count: 3;
+  }
+}

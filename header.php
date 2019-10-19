@@ -12,7 +12,7 @@
 
 	<a class="sr-only sr-only-focusable" href="#main"><?php _e( 'Hyppää sisältöön', 'oskarijarvelin' ); ?></a>
 
-	<div class="sticky-top bg-white shadow-sm border-bottom">
+	<header class="sticky-top bg-white">
 	  <div class="container navigation paavalikko">
 	    <div class="row">
 	      <div class="col">
@@ -41,4 +41,4 @@
 	      </div>
 	    </div>
 	  </div>
-	</div>
+	</header>

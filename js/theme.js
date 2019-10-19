@@ -1,5 +1,7 @@
 jQuery( document ).ready(function() {
 
+  scrolled();
+
   // Activates popovers
   jQuery(function () {
     jQuery('[data-toggle="popover"]').popover()
@@ -40,3 +42,24 @@ jQuery( document ).ready(function() {
       }
     });
 });
+
+
+
+jQuery( document ).scroll(function() {
+  scrolled();
+});
+
+
+
+// SCROLLED
+function scrolled() {
+  if ( jQuery( document ).scrollTop() > 70 ) {
+    jQuery('header.sticky-top').addClass('shadow-sm');
+    jQuery('header.sticky-top').addClass('border-bottom');
+  } else {
+    if ( jQuery('header.sticky-top').hasClass('shadow-sm') ) {
+      jQuery('header.sticky-top').removeClass('shadow-sm');
+      jQuery('header.sticky-top').removeClass('border-bottom');
+    }
+  }
+}
