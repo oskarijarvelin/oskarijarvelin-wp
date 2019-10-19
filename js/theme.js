@@ -63,3 +63,10 @@ function scrolled() {
     }
   }
 }
+
+
+
+// TAKAISIN
+function takaisin() {
+  window.history.back();
+}

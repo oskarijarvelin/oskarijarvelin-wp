@@ -9,7 +9,7 @@
 .card-columns {
   column-count: 1;
 
-  @include breakpoint(medium) {
+  @include breakpoint(small) {
     column-count: 2;
   }
 

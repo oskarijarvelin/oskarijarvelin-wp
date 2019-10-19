@@ -11,7 +11,8 @@
     <?php the_excerpt(); ?>
   </div>
 
-  <div class="card-footer text-muted text-center">
+  <div class="card-footer text-muted d-flex justify-content-between">
+    <p class="m-0"><small><?php echo get_the_category()[0]->name; ?></small></p>
     <p class="m-0"><small><?php echo get_the_date(); ?></small></p>
   </div>
 
