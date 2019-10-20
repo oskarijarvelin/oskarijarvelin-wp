@@ -31,7 +31,7 @@
 	<div class="container post-thumbnail pb-5">
     <div class="row d-flex justify-content-center">
 			<div class="col-12 px-0 px-md-3">
-				<img class="shadow" src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>">
+				<img class="shadow" src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>" alt="<?php the_title(); ?>">
 			</div>
 		</div>
 	</div>
@@ -47,7 +47,7 @@
 	<div class="container go-back pb-5">
     <div class="row d-flex justify-content-center">
 			<div class="col-12 col-md-11 col-lg-7">
-				<p><b><a href="javascript:;" onclick="takaisin()">&loarr; Palaa takaisin</a></b></p>
+				<p><b><a href="javascript:;" onclick="takaisin()" style="color: #223388;">&loarr; Palaa takaisin</a></b></p>
 			</div>
 		</div>
 	</div>
@@ -62,7 +62,7 @@
 					  <ul class="navbar-nav ml-auto py-2 d-flex flex-row flex-wrap justify-content-end">
 							<?php foreach ( get_the_tags() as $tag ) : ?>
 						    <li class="nav-item px-2">
-						      <a class="nav-link" href="<?php echo get_tag_link( $tag->term_id ); ?>"><?php echo $tag->name; ?></a>
+						      <a class="nav-link text-dark" href="<?php echo get_tag_link( $tag->term_id ); ?>"><?php echo $tag->name; ?></a>
 						    </li>
 							<?php endforeach; ?>
 					  </ul>

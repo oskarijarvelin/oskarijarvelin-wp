@@ -17,3 +17,9 @@
     column-count: 3;
   }
 }
+
+a.nav-link {
+  &.active {
+    color: #223388 !important;
+  }
+}

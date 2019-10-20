@@ -62,6 +62,14 @@ function scrolled() {
       jQuery('header.sticky-top').removeClass('border-bottom');
     }
   }
+
+  jQuery('.showonscroll').each( function() {
+    if ( !jQuery(this).hasClass('show') ) {
+      if ( jQuery(window).scrollTop() >= ( jQuery(this).offset().top - jQuery(window).height() + 80 ) ) {
+        jQuery(this).addClass('show');
+      }
+    }
+  });
 }
 
 

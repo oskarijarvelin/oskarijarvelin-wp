@@ -45,7 +45,7 @@
 
       <?php else: ?>
 
-        <a class="nav-link px-lg-0 pl-lg-3 text-center lead<?php if ( $linkki['url'] === home_url( $wp->request ) . '/' ) { echo " active"; } ?>" href="<?php echo $linkki['url']; ?>">
+        <a class="nav-link px-lg-0 pl-lg-3 text-center text-dark font-weight-bold lead<?php if ( $linkki['url'] === home_url( $wp->request ) . '/' ) { echo " active"; } ?>" href="<?php echo $linkki['url']; ?>">
           <?php echo $linkki['title']; ?><?php if ( $linkki['url'] === home_url( $wp->request ) . '/' ) { ?> <span class="sr-only">(nykyinen)</span><?php } ?>
         </a>
 
