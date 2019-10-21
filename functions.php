@@ -173,6 +173,30 @@ add_action( 'after_setup_theme', 'oskarijarvelin_content_width', 0 );
 
 
 
+function getAcfModuleSettings() {
+  $classes = '';
+
+  if ( get_sub_field('asetukset')['mt'] ) { $classes .= ' ' .  get_sub_field('asetukset')['mt']; }
+  if ( get_sub_field('asetukset')['mb'] ) { $classes .= ' ' .  get_sub_field('asetukset')['mb']; }
+  if ( get_sub_field('asetukset')['pt'] ) { $classes .= ' ' .  get_sub_field('asetukset')['pt']; }
+  if ( get_sub_field('asetukset')['pb'] ) { $classes .= ' ' .  get_sub_field('asetukset')['pb']; }
+
+  return $classes;
+}
+
+function getAcfColumnSettings() {
+  $classes = '';
+
+  if ( get_sub_field('leveys')['palstan_leveys'] ) { $classes .= ' col-' .  get_sub_field('leveys')['palstan_leveys']; }
+  if ( get_sub_field('leveys')['palstan_leveys_sm'] ) { $classes .= ' col-sm-' .  get_sub_field('leveys')['palstan_leveys_sm']; }
+  if ( get_sub_field('leveys')['palstan_leveys_md'] ) { $classes .= ' col-md-' .  get_sub_field('leveys')['palstan_leveys_md']; }
+  if ( get_sub_field('leveys')['palstan_leveys_lg'] ) { $classes .= ' col-lg-' .  get_sub_field('leveys')['palstan_leveys_lg']; }
+
+  return $classes;
+}
+
+
+
 function oskarijarvelin_scripts() {
 
   /* Bootstrap v4.3.1*/
