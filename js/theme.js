@@ -55,11 +55,9 @@ jQuery( document ).scroll(function() {
 function scrolled() {
   if ( jQuery( document ).scrollTop() > 70 ) {
     jQuery('header.sticky-top').addClass('shadow-sm');
-    jQuery('header.sticky-top').addClass('border-bottom');
   } else {
     if ( jQuery('header.sticky-top').hasClass('shadow-sm') ) {
       jQuery('header.sticky-top').removeClass('shadow-sm');
-      jQuery('header.sticky-top').removeClass('border-bottom');
     }
   }
 
@@ -70,6 +68,15 @@ function scrolled() {
       }
     }
   });
+
+  var h = document.documentElement,
+  b = document.body,
+  st = 'scrollTop',
+  sh = 'scrollHeight';
+  var percent = parseInt((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+
+  jQuery('#progressbar').css("width", percent + "%");
+  jQuery('#progressbar').attr("aria-valuenow", percent);
 }
 
 

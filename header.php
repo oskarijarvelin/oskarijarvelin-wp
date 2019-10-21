@@ -41,4 +41,8 @@
 	      </div>
 	    </div>
 	  </div>
+
+		<div class="progress bg-light" style="height: 1px;">
+  		<div id="progressbar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+		</div>
 	</header>

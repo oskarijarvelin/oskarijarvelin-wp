@@ -18,6 +18,10 @@
   }
 }
 
+.progress-bar {
+  transition: width 1s ease-out;
+}  
+
 a.nav-link {
   &.active {
     color: #223388 !important;
