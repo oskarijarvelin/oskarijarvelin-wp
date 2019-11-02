@@ -81,6 +81,17 @@ function scrolled() {
 
 
 
+// TOGGLE
+function toggle(ele) {
+  if ( jQuery(ele).hasClass('show') ) {
+    jQuery(ele).removeClass('show');
+  } else {
+    jQuery(ele).addClass('show');
+  }
+}
+
+
+
 // TAKAISIN
 function takaisin() {
   window.history.back();

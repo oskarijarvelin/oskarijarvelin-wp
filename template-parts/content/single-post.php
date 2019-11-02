@@ -91,11 +91,11 @@
 						<h3>Joko luit nämä?</h3>
 					</div>
 
-					<div class="col-12 card-columns">
-					  <?php while ( $more->have_posts() ) : $more->the_post(); ?>
+				  <?php while ( $more->have_posts() ) : $more->the_post(); ?>
+						<div class="col-12 col-sm-6 col-lg-4 d-flex align-items-stretch">
 							<?php get_template_part( 'template-parts/content/excerpt', 'post' ); ?>
-					  <?php endwhile; ?>
-					</div>
+						</div>
+				  <?php endwhile; ?>
 
 				</div>
 			</div>
