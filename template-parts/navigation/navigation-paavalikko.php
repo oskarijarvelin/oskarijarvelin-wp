@@ -60,6 +60,6 @@
 <li class="nav-item px-0 py-0 pl-3 d-none d-lg-block">
   <a class="nav-link btn btn-oskari px-3 py-2 d-flex justify-content-center align-items-center text-center text-white font-weight-bold" href="tel:+358458983883">
     <img class="" src="https://dev.oskarijarvelin.fi/wp-content/uploads/2019/11/telephone-handle-silhouette.png" width="16px" height="16px">
-    <span class="pl-2">Ota yhteyttä</a>
+    <span class="pl-2">Soita</a>
   </a>
 </li>

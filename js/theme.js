@@ -2,19 +2,20 @@ jQuery( document ).ready(function() {
 
   scrolled();
 
-  var strings = jQuery("#typer").data('strings').split("|");
-  jQuery("#typer").typer({
-    strings: strings,
-    typeSpeed: 60,
-    backspaceSpeed: 30,
-    backspaceDelay: 3000,
-    repeatDelay: 1000,
-    repeat:true,
-    autoStart:true,
-    startDelay: 1000,
-    useCursor:true
-  });
-
+  if(jQuery("#typer").length !== 0) {
+    var strings = jQuery("#typer").data('strings').split("<br />");
+    jQuery("#typer").typer({
+      strings: strings,
+      typeSpeed: 60,
+      backspaceSpeed: 30,
+      backspaceDelay: 3000,
+      repeatDelay: 1000,
+      repeat:true,
+      autoStart:true,
+      startDelay: 1000,
+      useCursor:true
+    });
+  }
 
   // Activates popovers
   jQuery(function () {

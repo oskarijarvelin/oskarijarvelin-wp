@@ -1,3 +1,8 @@
-article.article.single {
+main {
   padding-top: 59px;
+  min-height: 100vh;
+
+  &.frontpage {
+    padding-top: 0;
+  }
 }

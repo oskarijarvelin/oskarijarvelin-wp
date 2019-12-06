@@ -12,7 +12,7 @@
 
 
 
-	<div class="acf-content pb-5">
+	<div class="acf-content">
 		<?php
 			if ( have_rows( 'sisalto' ) ):
 				while ( have_rows( 'sisalto' ) ) : the_row();

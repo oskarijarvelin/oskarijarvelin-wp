@@ -1,15 +1,7 @@
-<footer id="footer" class="footer border-top">
+<footer id="footer" class="footer border-top bg-light">
 
 	<div class="container">
-		<div id="yhteys" class="row py-5">
-			<div class="col">
-				<p>Yhteystiedot</p>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row d-flex mb-3">
+		<div class="row d-flex py-3">
 
 			<div class="col-12 col-sm-6 text-center text-sm-left">&copy <?php echo date('Y'); ?>: <a href="<?php echo get_site_url(); ?>" class="oskari"><?php echo get_bloginfo( 'name' ); ?></a></div>
 

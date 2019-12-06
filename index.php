@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="main" class="main index py-3">
+<main id="main" class="main index">
 
 	<header class="container main-header pt-5 pb-4">
 		<div class="row">
