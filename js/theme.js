@@ -2,6 +2,20 @@ jQuery( document ).ready(function() {
 
   scrolled();
 
+  var strings = jQuery("#typer").data('strings').split("|");
+  jQuery("#typer").typer({
+    strings: strings,
+    typeSpeed: 60,
+    backspaceSpeed: 30,
+    backspaceDelay: 3000,
+    repeatDelay: 1000,
+    repeat:true,
+    autoStart:true,
+    startDelay: 1000,
+    useCursor:true
+  });
+
+
   // Activates popovers
   jQuery(function () {
     jQuery('[data-toggle="popover"]').popover()
@@ -53,13 +67,25 @@ jQuery( document ).scroll(function() {
 
 // SCROLLED
 function scrolled() {
-  if ( jQuery( document ).scrollTop() > 70 ) {
-    jQuery('header.sticky-top').addClass('shadow-sm');
+
+  if ( jQuery('header').hasClass('frontpage') ) {
+    if ( jQuery( document ).scrollTop() > 70 ) {
+      jQuery('header').addClass('scrolled');
+    } else {
+      if ( jQuery('header').hasClass('scrolled') ) {
+        jQuery('header').removeClass('scrolled');
+      }
+    }
   } else {
-    if ( jQuery('header.sticky-top').hasClass('shadow-sm') ) {
-      jQuery('header.sticky-top').removeClass('shadow-sm');
+    if ( jQuery( document ).scrollTop() > 70 ) {
+      jQuery('header').addClass('scrolled');
+    } else {
+      if ( jQuery('header').hasClass('scrolled') ) {
+        jQuery('header').removeClass('scrolled');
+      }
     }
   }
+
 
   jQuery('.showonscroll').each( function() {
     if ( !jQuery(this).hasClass('show') ) {

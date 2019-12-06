@@ -2,26 +2,23 @@
 @import "mixins/mixins";
 @import "typography/typography";
 
-/* ACF */
-
+// ACF
 @import "acf/acf";
 
-/* Bootstrap */
-
+// Bootstrap
 @import "bootstrap/bootstrap";
 
-/* Elements */
-
+// Elements
 @import "elements/elements";
 
-/* Navigation */
-
+// Navigation
 @import "navigation/navigation";
 
-/* Ninja Forms */
+// Site
+@import "site/site";
 
+// Ninja Forms
 @import "ninjaforms/ninjaforms";
 
-/* Template-parts */
-
+// Template-parts
 @import "template-parts/template-parts";

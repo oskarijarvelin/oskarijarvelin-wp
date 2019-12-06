@@ -1,5 +1,29 @@
+.display-2 {
+  font-size: 2rem;
+
+  @include breakpoint(small) {
+    font-size: 3rem;
+  }
+
+  @include breakpoint(medium) {
+    font-size: 4.5rem;
+  }
+
+  @include breakpoint(large) {
+    font-size: 6rem;
+  }
+}
+
 .display-4 {
   font-size: 3rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+
+  @include breakpoint(medium) {
+    font-size: 1.75rem;
+  }
 }
 
 .post-excerpt .lead {
@@ -16,6 +40,10 @@
   @include breakpoint(xlarge) {
     column-count: 3;
   }
+}
+
+.progress {
+  background-color: transparent;
 }
 
 .progress-bar {
@@ -42,6 +70,8 @@ a.nav-link {
 .text-muted {
   color: #6b7379;
 }
+
+
 
 .btn-oskari {
   color: #fff;

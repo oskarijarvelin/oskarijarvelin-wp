@@ -1,12 +1,14 @@
 <section id="page-<?php the_ID(); ?>" class="page single">
 
-	<header class="container page-header py-5">
-		<div class="row">
-			<div class="col-12 py-3">
-				<h1 class="display-4"><?php the_title(); ?></h1>
+	<?php if ( !is_front_page() ) : ?>
+		<header class="container page-header py-5">
+			<div class="row">
+				<div class="col-12 py-3">
+					<h1 class="display-4"><?php the_title(); ?></h1>
+				</div>
 			</div>
-		</div>
-	</header>
+		</header>
+	<?php endif;  ?>
 
 
 

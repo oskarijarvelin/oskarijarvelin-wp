@@ -1,0 +1,19 @@
+header#header.header {
+  background-color: rgba(255,255,255,1);
+  transition: background-color 1s ease;
+  box-shadow: 0 0 20px 0 rgba(0,0,0,.15);
+
+  &.frontpage {
+    background-color: rgba(255,255,255,.65);
+    transform: translateY(-60px);
+    transition: transform 1s ease;
+
+    &.scrolled {
+      transform: translateY(0);
+    }
+  }
+
+  &.scrolled {
+    background-color: rgba(255,255,255,1);
+  }
+}

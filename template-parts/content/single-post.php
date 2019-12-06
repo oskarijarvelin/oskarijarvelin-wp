@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" class="article single pt-4">
+<article id="post-<?php the_ID(); ?>" class="article single">
 
 	<header class="container post-header py-5">
 		<div class="row">

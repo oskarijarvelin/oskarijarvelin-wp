@@ -1,5 +1,13 @@
 <?php
 
+function getAge($then) {
+    $then_ts = strtotime($then);
+    $then_year = date('Y', $then_ts);
+    $age = date('Y') - $then_year;
+    if(strtotime('+' . $age . ' years', $then_ts) > time()) $age--;
+    return $age;
+}
+
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 if ( is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) ) {
 
@@ -199,16 +207,19 @@ function getAcfColumnSettings() {
 
 function oskarijarvelin_scripts() {
 
-  /* Bootstrap v4.3.1*/
+  /* Bootstrap v4.3.1 */
   wp_enqueue_style( 'bootstrap-styles', get_theme_file_uri( 'depencies/bootstrap/bootstrap.min.css' ), array(), '' );
 	wp_enqueue_script( 'bootstrap-scripts', get_theme_file_uri( 'depencies/bootstrap/bootstrap.bundle.min.js' ), array( 'jquery' ), '' );
 
-  /* Parallax v3.1.0*/
+  /* Parallax v3.1.0 */
 	wp_enqueue_script( 'parallax-scripts', get_theme_file_uri( 'depencies/parallax/parallax.min.js' ), array(), '' );
 
-  /* Swiper v4.5.0*/
+  /* Swiper v4.5.0 */
   wp_enqueue_style( 'swiper-styles', get_theme_file_uri( 'depencies/swiper/swiper.min.css' ), array(), '' );
 	wp_enqueue_script( 'swiper-scripts', get_theme_file_uri( 'depencies/swiper/swiper.min.js' ), array(), '' );
+
+  /* Typer */
+  wp_enqueue_script( 'typer-scripts', get_theme_file_uri( 'depencies/typer.min.js' ), array( 'jquery' ), '' );
 
 	wp_enqueue_style( 'theme-styles', get_theme_file_uri( 'style.min.css' ), array(), '' );
 	wp_enqueue_script( 'theme-scripts', get_theme_file_uri( 'script.min.js' ), array( 'jquery' ), '' );

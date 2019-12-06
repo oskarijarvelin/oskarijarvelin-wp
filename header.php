@@ -12,7 +12,7 @@
 
 	<a class="sr-only sr-only-focusable" href="#main"><?php _e( 'Hyppää sisältöön', 'oskarijarvelin' ); ?></a>
 
-	<header class="sticky-top bg-white">
+	<header id="header" class="header fixed-top<?php if ( is_front_page() ) { echo ' frontpage'; } ?>">
 	  <div class="container navigation paavalikko">
 	    <div class="row">
 	      <div class="col pl-0 px-lg-0">
@@ -51,7 +51,7 @@
 	    </div>
 	  </div>
 
-		<div class="progress bg-light" style="height: 1px;">
+		<div class="progress" style="height: 1px;">
 			<?php if ( is_single() && get_post_type() === 'post' ) : ?>
   			<div id="progressbar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 			<?php endif; ?>
