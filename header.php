@@ -32,9 +32,11 @@
 								<span class="d-none d-lg-inline-block">Soita</a>
 							</a>
 
+							<!--
 						  <button id="paavalikkoToggle" class="navbar-toggler px-1" type="button" data-toggle="collapse" data-target="#paavalikko-navbar" aria-controls="paavalikko-navbar" aria-expanded="false" aria-label="Toggle navigation">
 						    <span class="navbar-toggler-icon"></span>
 						  </button>
+							-->
 
 						</div>
 
