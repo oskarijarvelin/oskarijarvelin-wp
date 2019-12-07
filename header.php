@@ -28,7 +28,7 @@
 						<div class="d-flex">
 
 							<a class="btn btn-oskari text-white font-weight-bold d-flex justify-content-center align-items-center d-lg-none mr-3 px-3 px-lg-4 py-2" href="tel:+358458983883">
-								<img class="" src="https://dev.oskarijarvelin.fi/wp-content/uploads/2019/11/telephone-handle-silhouette.png" width="16px" height="16px">
+								<img class="" src="https://dev.oskarijarvelin.fi/wp-content/uploads/2019/11/telephone-handle-silhouette.png" width="16px" height="16px" alt="Ikoni: Puhelin">
 								<span class="d-none d-lg-inline-block">Soita</a>
 							</a>
 
