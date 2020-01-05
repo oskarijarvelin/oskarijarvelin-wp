@@ -15,7 +15,7 @@
 	<header id="header" class="header fixed-top<?php if ( is_front_page() ) { echo ' frontpage'; } ?>">
 	  <div class="container navigation paavalikko">
 	    <div class="row">
-	      <div class="col pl-0 px-lg-0">
+	      <div class="col px-0">
 					<nav class="navbar navbar-expand-lg navbar-light px-0">
 					  <a class="navbar-brand oskari px-3" href="<?php echo get_site_url(); ?>">
 					    <?php if ( get_field('logo', 'theme') ) : ?>
