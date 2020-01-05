@@ -1,20 +1,16 @@
 <?php get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<main id="main" class="main e404">
 
-			<div class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'oskarijarvelin' ); ?></h1>
-				</header>
-
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'oskarijarvelin' ); ?></p>
-					<?php get_search_form(); ?>
-				</div>
+	<header class="container page-header my-lg-5 py-lg-5">
+		<div class="row my-sm-3 py-sm-3 my-lg-5 py-lg-5">
+			<div class="col-12 my-5 py-5 vh-75 d-flex flex-column justify-content-center">
+				<h1 class="display-3 mb-5 text-lg-center"><?php _e('Sisältöä ei löydy.', 'oskarijarvelin'); ?></h1>
+				<p class="lead mb-5 text-lg-center"><?php _e('Olen pahoillani. Paljon vanhaa sisältöä tuhottiin uuden tieltä.', 'oskarijarvelin'); ?></p>
 			</div>
+		</div>
+	</header>
 
-		</main>
-	</section>
+</main>
 
 <?php get_footer(); ?>
