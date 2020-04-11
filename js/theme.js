@@ -17,16 +17,6 @@ jQuery( document ).ready(function() {
     });
   }
 
-  // Activates popovers
-  jQuery(function () {
-    jQuery('[data-toggle="popover"]').popover()
-  })
-
-  // Activates hover-opening for popovers
-  jQuery('.popover-dismiss').popover({
-    trigger: 'focus'
-  })
-
   // Smooth scrolling
   jQuery('a[href*="#"]')
     .not('[href="#"]')
@@ -68,26 +58,6 @@ jQuery( document ).scroll(function() {
 
 // SCROLLED
 function scrolled() {
-
-  if ( jQuery('header').hasClass('frontpage') ) {
-    if ( jQuery( document ).scrollTop() > 70 ) {
-      jQuery('header').addClass('scrolled');
-    } else {
-      if ( jQuery('header').hasClass('scrolled') ) {
-        jQuery('header').removeClass('scrolled');
-      }
-    }
-  } else {
-    if ( jQuery( document ).scrollTop() > 70 ) {
-      jQuery('header').addClass('scrolled');
-    } else {
-      if ( jQuery('header').hasClass('scrolled') ) {
-        jQuery('header').removeClass('scrolled');
-      }
-    }
-  }
-
-
   jQuery('.showonscroll').each( function() {
     if ( !jQuery(this).hasClass('show') ) {
       if ( jQuery(window).scrollTop() >= ( jQuery(this).offset().top - jQuery(window).height() + 80 ) ) {

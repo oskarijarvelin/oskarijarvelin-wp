@@ -1,3 +1,4 @@
+<?php if ( !is_front_page() ) : ?>
 <footer id="footer" class="footer border-top bg-light">
 
 	<div class="container">
@@ -17,6 +18,7 @@
 	</div>
 
 </footer>
+<?php endif; ?>
 
 </body>
 </html>

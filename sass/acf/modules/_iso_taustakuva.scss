@@ -1,11 +1,10 @@
 section.acf-module.iso-taustakuva {
-  width: 100%;
-  height: 100vh;
-  min-height: 560px;
-  background-position: 60% 0%;
+  background-attachment: fixed;
   background-repeat: no-repeat;
+  background-position: top center;
   background-size: cover;
   position: relative;
+  width: 100%;
   z-index: 1;
 
   &:before {
@@ -15,6 +14,7 @@ section.acf-module.iso-taustakuva {
     left: 0;
     width: 100%;
     height: 100%;
+    background-attachment: fixed;
     background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.5) 2%, rgba(255,255,255,0) 4%);
 
     @include breakpoint(large) {
@@ -29,11 +29,38 @@ section.acf-module.iso-taustakuva {
     left: 0;
     width: 100%;
     height: 100%;
+    background-attachment: fixed;
     background-image: linear-gradient(10deg, rgba(255,255,255,1) 0%, rgba(255,255,255,.5) 45%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%);
 
     @include breakpoint(large) {
       background-image: linear-gradient(115deg, rgba(248,248,248,.9) 0%, rgba(248,248,248,.8) 35%, rgba(248,248,248,.5) 40%, rgba(248,248,248,0) 55%, rgba(248,248,248,0) 100%);
     }
+  }
+
+  .screen {
+    background-attachment: fixed;
+    background-image: linear-gradient(transparent 0%, transparent 50%, #212529 60%, #212529 100%);
+    -webkit-background-clip: text;
+    width: 100%;
+    height: auto;
+
+    @include breakpoint(large) {
+      background-attachment: unset;
+      background-image: unset;
+      -webkit-background-clip: unset;
+    }
+
+    * {
+      color: transparent;
+
+      @include breakpoint(large) {
+        color: unset;
+      }
+    }
+  }
+
+  .fullscreen {
+    min-height: 100vh;
   }
 
   .container-fluid {
